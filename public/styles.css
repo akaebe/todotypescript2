@@ -1,0 +1,217 @@
+body { 
+    font-family: Arial, sans-serif; 
+    margin: 0;
+    padding: 0;
+    background-color: #121212;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #fff;
+}
+
+.container {
+    background-color:#1f1f1f;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    width: 350px;
+}
+
+h1 { 
+    text-align: center;
+    color: #fff;
+}
+
+#todoForm {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#title {
+    flex-grow: 1;
+    padding: 10px;
+    border: 1px solid #333;
+    background-color: #333;
+    color: #fff;
+    border-radius: 5px 0 0 5px;
+}
+
+#priority {
+    padding: 10px;
+    background-color: #333;
+    color: #fff;
+    border: 1px solid #333;
+    border-left: none;
+}
+
+#addBtn {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 10px;
+}
+
+#addBtn img {
+    width: 30px;
+    height: 30px;
+    filter: invert(34%) sepia(100%) saturate(1066%) hue-rotate(175deg) brightness(96%) contrast(92%);
+}
+
+ul { 
+    list-style-type: none; 
+    padding: 0; 
+}
+
+li { 
+    padding: 10px 0; 
+    border-bottom: 1px solid #333;
+    display: flex;
+    align-items: center;
+}
+
+.todo-text {
+    flex-grow: 1;
+    margin-left: 10px;
+    color: #fff;
+}
+
+.completed .todo-text {
+    text-decoration: line-through;
+    color: #888;
+}
+
+.checkbox {
+    width: 20px;
+    height: 20px;
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 10px;
+}
+
+.checkbox img {
+    width: 20px;
+    height: 20px;
+    filter: invert(34%) sepia(92%) saturate(1409%) hue-rotate(111deg) brightness(101%) contrast(100%);
+}
+
+.pin-icon, .delete-icon, .priority-icon {
+    cursor: pointer;
+    padding: 0 5px;
+    width: 18px;
+    height: 18px;
+}
+
+.pin-icon img, .delete-icon img, .priority-icon img {
+    width: 16px;
+    height: 16px;
+}
+
+.pin-icon img {
+    filter: hue-rotate(60deg);
+}
+
+.delete-icon img {
+    filter: brightness(0) saturate(100%) invert(16%) sepia(100%) saturate(300%) hue-rotate(360deg) brightness(80%) contrast(105%);
+}
+
+.priority-icon img {
+    filter: invert(100%);
+}
+
+.priority-1 .priority-icon img {
+    filter: invert(62%) sepia(87%) saturate(439%) hue-rotate(76deg) brightness(93%) contrast(88%);
+}
+
+.priority-2 .priority-icon img {
+    filter: invert(78%) sepia(61%) saturate(552%) hue-rotate(359deg) brightness(101%) contrast(107%);
+}
+
+.priority-3 .priority-icon img {
+    filter: invert(21%) sepia(100%) saturate(7414%) hue-rotate(359deg) brightness(94%) contrast(117%);
+}
+
+/* Optional hover effect for better interactivity */
+.pin-icon:hover img, .delete-icon:hover img, .checkbox:hover img, .priority-icon:hover img {
+    opacity: 0.8;
+}
+.priority-badge {
+    padding: 5px;
+    border-radius: 3px;
+    font-weight: bold;
+}
+
+.priority-1 {
+    background-color: green;
+    color: white;
+}
+
+.priority-2 {
+    background-color: orange;
+    color: white;
+}
+
+.priority-3 {
+    background-color: red;
+    color: white;
+}
+/* Light Mode (default) */
+body {
+    background-color: #fff;
+    color: #000;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
+
+/* Toggle Switch Styling */
+.switch {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #2196F3;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
